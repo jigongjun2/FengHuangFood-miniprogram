@@ -1,0 +1,643 @@
+/**index.wxss**/
+
+
+.bt_desc_rightCss{
+  text-align: center;
+  width:200rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  position: absolute;
+  right: 0rpx;
+  top:0rpx;
+  background-color: #4994f7;
+  color:#ffffff ;
+}
+
+.bt_desc_rightCss_not{
+  text-align: center;
+  width:200rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  position: absolute;
+  right: 0rpx;
+  top:0rpx;
+  background-color: #656463;
+  color: #cccccc;
+}
+
+.bt_tc_top{
+  width: 750rpx;
+  margin-top: 60rpx;
+  /* outline: 1px solid hotpink; */
+}
+
+.bt_tc_name{
+  width: 400rpx;
+  float: left;
+  /* outline: 1px solid hotpink; */
+}
+
+.bt_tc_price{
+  color:#ff0000;
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  float: left;
+  width: 300rpx;
+  height: 50rpx;
+  /* outline: 1px solid hotpink; */
+}
+
+.bt_tc_price_1{
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.bt_tc_spicy{
+  width: 400rpx;
+  float: left;
+  font-size: 24rpx;
+  color: #8e8e8e;
+}
+
+
+.eachShopCarView{
+  width: 100%;
+  height: 120rpx;
+  border-bottom: 1px solid #ededed;
+}
+
+.shopCar_top_img{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 630rpx;
+  top:30rpx
+}
+
+.shopCar_top_right{
+  width: 10vw;
+  margin-left: 530rpx;
+  font-size: 24rpx;
+  color: #82818b;
+  /* outline: 1px solid hotpink; */
+}
+
+.shopCar_top_left{
+  font-size: 24rpx;
+  padding-left: 20rpx;
+  color: #636363;
+}
+
+.shopCar_top{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #f8f8f8;
+  /* outline: 1px solid hotpink; */
+}
+
+.shopCarPicView{
+  width: 100rpx;
+  height: 100rpx;
+  vertical-align: middle;
+  position: absolute;
+  top: -30rpx;
+  left: 40rpx;
+  z-index: 1000;
+  border: none;
+  border-radius: 100%;
+  background-color: #656463;
+}
+
+.shopCarPicView_not{
+  width: 100rpx;
+  height: 100rpx;
+  vertical-align: middle;
+  position: absolute;
+  top: -30rpx;
+  left: 40rpx;
+  z-index: 1000;
+  border: none;
+  border-radius: 100%;
+  background-color: #e0eefd;
+}
+
+.shopCarPic{
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 15rpx;
+  margin-top: 13rpx;
+}
+
+.bt_shopCar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top:1px solid #dfdfdf ;
+  width: 750rpx;
+  height: 100rpx;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+
+.callBox_Num{
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+}
+.callBox_Call{
+  width: 100%;
+  border-bottom: 8px solid #efefef;
+}
+.callBox_Call2{
+  width: 100%;
+  background-color: #e5e5e5;
+}
+.callBox_Exit{
+  width: 100%;
+  border:none;
+}
+.callBox_Exit2{
+  width: 100%;
+  background-color: #e5e5e5;
+}
+
+.bt_pic{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top:350rpx;
+  padding-left: 370rpx;
+}
+
+.cover_screen {
+  width: 750rpx;
+  height: 1334rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.cover_screen_login {
+  width: 750rpx;
+  height: 1334rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.cover_screen_choseType {
+  width: 750rpx;
+  height: 1334rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.cover_screen_shopCar {
+  width: 750rpx;
+  height: 1334rpx;
+  position: fixed;
+  bottom: 100rpx;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.bottom_box {
+  width: 750rpx;
+  height: 585rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding: 20rpx;
+  overflow: hidden;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+
+.login_box{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-content: center;
+}
+
+.bottom_box_login {
+  width: 750rpx;
+  height: 20vh;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding: 20rpx;
+  overflow: hidden;
+  /* display: flex;
+  flex-direction:column;
+  align-content: center; */
+}
+
+.bottom_box_choseType {
+  width: 750rpx;
+  height: 585rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding: 20rpx;
+  overflow: hidden;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+
+.bottom_box_shopCar {
+  width: 750rpx;
+  height: auto;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 102rpx;
+  left: 0;
+  /* z-index必须1000 */
+  z-index: 1000;
+  background: #fff;
+  padding: 20rpx;
+  overflow: hidden;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+
+#littleFontColor{
+  color:#606060 ;
+}
+
+.spname{
+  font-size: 37rpx;
+  font-weight: bolder;
+  text-align: center;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.peisong{
+  font-size: 24rpx;
+  text-align: center;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.tips{
+  font-size: 24rpx;
+  text-align: center;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.menuLeft{
+  width: 187.5rpx;
+  height: 5200rpx;
+  background-color: #f8f8f8 ;
+  position: fixed;
+  top:0
+}
+.menuLeftFixed{
+  width: 187.5rpx;
+  height: 5200rpx;
+  background-color: #f8f8f8 ;
+  float: left;
+}
+
+.menuRight{
+  width: 540rpx;
+  height: 5200rpx;
+  margin-left: 20.5rpx;
+  float: left;
+}
+
+.menuRightFixed{
+  width: 540rpx;
+  height: 5200rpx;
+  margin-left: 204rpx;
+  float: left;
+}
+
+.eachFoodBox{
+  width: 100%;
+  height: 180rpx;
+  margin-top: 20rpx;
+}
+
+.eachFoodPic{
+  width: 180rpx;
+  height: 180rpx;
+  float: left;
+}
+
+.eachFoodName{
+  float: left;
+  width: 340rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.eachFoodsale{
+  width: 340rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  float: left;
+  padding-left: 20rpx;
+  font-size: 24rpx;
+  color: #969696;
+}
+
+.eachFoodPrice1{
+  width: 340rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  padding-left: 20rpx;
+  margin-top: 50rpx;
+  font-size: 30rpx;
+  color: red;
+  /* outline: 1px solid hotpink; */
+}
+
+.eachFoodPrice2{
+  width: 340rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  color: red;
+  /* outline: 1px solid hotpink; */
+}
+
+.bt_notSpicy{
+  height:80rpx !important;
+  line-height:80rpx !important;
+  width:200rpx !important;
+  font-size:28rpx !important;
+  font-weight:400 !important;
+  background-color: #d7e9fd;
+  color:#3688f5
+}
+
+.bt_notSpicy_notChose{
+  height:80rpx !important;
+  line-height:80rpx !important;
+  width:200rpx !important;
+  font-size:28rpx !important;
+  font-weight:400 !important
+}
+
+.bt_spicy{
+  height:80rpx !important;
+  line-height:80rpx !important;
+  width:200rpx !important;
+  margin-left:20rpx !important;
+  font-size:28rpx !important;
+  font-weight:400 !important;
+  background-color: #d7e9fd;
+  color:#3688f5
+}
+
+.bt_spicy_notChose{
+  height:80rpx !important;
+  line-height:80rpx !important;
+  width:200rpx !important;
+  margin-left:20rpx !important;
+  font-size:28rpx !important;
+  font-weight:400 !important
+}
+
+.choseSpType{
+  font-size: 24rpx;
+  background-color: #4994f7;
+  color:white;
+  width: 110rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  margin-left: 150rpx;
+  text-align: center;
+  border-radius: 30rpx;
+}
+
+.choseSpType_not{
+  font-size: 24rpx !important;
+  background-color: #656463 !important;
+  color:#d1d1d1 !important;
+  width: 110rpx !important;
+  height: 50rpx !important;
+  line-height: 50rpx !important;
+  float: left !important;
+  margin-left: 150rpx !important;
+  text-align: center !important;
+  border-radius: 30rpx !important;
+}
+
+.shopDelTc{
+  font-size: 40rpx;
+  background-color: white;
+  color:#4994f7;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  margin-left: 85rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  border: 1px solid #4994f7;
+}
+
+.shopAddTc{
+  font-size: 40rpx;
+  background-color: #4994f7;
+  color:white;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  position: absolute;
+  left: 650rpx;
+  text-align: center;
+  border-radius: 30rpx;
+}
+
+.shopDel_shopcar{
+  font-size: 40rpx;
+  background-color: white;
+  color:#4994f7;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  margin-left: 75rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  border: 1px solid #4994f7;
+}
+
+.shopAdd_shopcar{
+  font-size: 40rpx;
+  background-color: #4994f7;
+  color:white;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  position: absolute;
+  left:630rpx;
+  /* margin-left: 10rpx; */
+  text-align: center;
+  border-radius: 30rpx;
+}
+
+.shopDel{
+  font-size: 40rpx;
+  background-color: white;
+  color:#4994f7;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  margin-left: 103rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  border: 1px solid #4994f7;
+}
+
+.shopAdd{
+  font-size: 40rpx;
+  background-color: #4994f7;
+  color:white;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  position: absolute;
+  left:650rpx;
+  /* margin-left: 10rpx; */
+  text-align: center;
+  border-radius: 30rpx;
+}
+
+.shopAdd_notShow{
+  font-size: 40rpx;
+  background-color: #4994f7;
+  color:white;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  position: absolute;
+  left:650rpx;
+  /* margin-left: 10rpx; */
+  text-align: center;
+  border-radius: 30rpx;
+}
+
+.eachFoodVipPrice{
+  width: 340rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  float: left;
+  padding-left: 20rpx;
+  font-size: 24rpx;
+  color: #f4b635;
+}
+
+.vipPic{
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: middle;
+}
+
+
+
+.order_left1-1{
+  font-size: 22rpx;
+  width: 187.5rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  background-color:white ;
+}
+
+.order_left1-2{
+  font-size: 22rpx;
+  width: 187.5rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  background-color:#f8f8f8 ;
+}
+
+.order_left2-1{
+  font-size: 11px;
+  width: 187.5rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  background-color:white;
+}
+
+.order_left2-2{
+  font-size: 11px;
+  width: 187.5rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  background-color:#f8f8f8 ;
+}
+
+.hhpic{
+  height: 300rpx;
+  width: 750rpx;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}

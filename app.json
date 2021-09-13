@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/paymoney/paymoney",
+    "pages/choseAddr/choseAddr",
+    "pages/editAddr/editAddr",
+    "pages/addAddr/addAddr",
+    "pages/addbeizhu/addbeizhu",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

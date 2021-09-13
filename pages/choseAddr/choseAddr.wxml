@@ -1,0 +1,37 @@
+<!--pages/choseAddr/choseAddr.wxml-->
+<view class='chose_addr'>
+    <view class='chose_addr_top'>
+        <view wx:for="{{addrList}}" wx:for-index="index" class='eachAddr'>
+            <view class='eachAddr_left'>
+                <view class="radio">
+                    <label>
+                        <radio value="r1" style='transform:scale(0.7)'></radio>
+                    </label>
+                </view>
+            </view>
+            <view class='eachAddr_middle' bindtap='confirmChoseAddr' data-choseitem='{{item[0]}}'>
+                <view class='eachAddr_middle_top' style='font-size:30rpx;width:100%;float:left'>
+                    <view style='margin-left:10rpx'>
+                        <text class='{{item[0].tagClass}}'>{{item[0].choseTag}} </text>
+                        {{item[0].location}} {{item[0].menpaiNum}}
+                    </view>
+                </view>
+                <view class='eachAddr_middle_bottom' style='margin-left:10rpx;margin-top:12rpx;width:100%;font-size:28rpx;color:#8a8a8a;float:left'>
+                    <view>{{item[0].name}} {{item[0].phoneNum}}</view>
+                </view>
+            </view>
+            <view class='eachAddr_right'>
+                <image src="../pics/delete2.png" style='width:35rpx;height:35rpx' bindtap="del" data-clickitem='{{item[0]}}'></image>
+                <image src="../pics/bianji.png" style='width:35rpx;height:35rpx' bindtap="edit" data-clickitemedit='{{item[0]}}' data-index='{{index}}'></image>
+            </view>
+        </view>
+    </view>
+    <view class='chose_addr_bottom'>
+        <view class='chose_addr_bottom_left' bindtap="toEditAddr">
+            手动新增
+        </view>
+        <view class='chose_addr_bottom_right' bindtap="chose_addr_wx">
+            微信新增
+        </view>
+    </view>
+</view>

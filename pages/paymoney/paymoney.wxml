@@ -1,0 +1,107 @@
+<view>
+    <!-- 以下是授权登录弹窗 -->
+    <view class="cover_screen_pay" wx:if="{{showModalStatus_pay}}"></view>
+    <view animation="{{animationData_pay}}" class="bottom_box_pay" wx:if="{{showModalStatus_pay}}">
+        <view class="bottom_box_pay_1"><image src="../pics/cha.png" style='width:40rpx;height:40rpx' catchtap="hideTanchuang_pay"></image></view>
+        <view class="bottom_box_pay_2">请确认您的下单门店</view>
+        <view class="bottom_box_pay_3">
+            <view class="bottom_box_pay_3_left">
+                <text style='font-weight:bolder;color:black;font-size:27rpx'>辉煌美食大学城青蓝致远饭堂 广州大学城店</text> 
+                <text>\r\n</text>
+                 广州市番禺区广东省广州市番禺区
+                 <text>\r\n</text>
+                小谷围街穗石村直街大街24号首层
+            </view> 
+            <view class="bottom_box_pay_3_right">{{distance}}</view> 
+        </view>
+        <view class="bottom_box_pay_4">
+            <view class="bottom_box_pay_4_text" bindtap='apppay'>确认并支付</view> 
+        </view>
+    </view>
+    <!-- 以上是授权登录弹窗 -->
+    <view style='width:100vw;height:90vh;float:left'>
+        <view class='top_desc' style='float:left'>
+            外卖配送
+        </view>
+        <!-- 以下是地址选择器 -->
+        <view class='show_addr' style='float:left' bindtap="toChoseAddr">
+            <view class='show_addr_left'>
+                <view style='padding-left:2vw;font-size:34rpx;float:left;width:100%;'>{{choseAddr_chose.location}}
+                    {{choseAddr_chose.menpaiNum}}{{tips}}</view>
+                <view style='padding-left:2vw;font-size:24rpx;color:#171717;width:100%;float:left'>
+                    {{choseAddr_chose.name}}
+                    {{choseAddr_chose.phoneNum}}</view>
+            </view>
+            <view class='show_addr_right' bindtap="toChoseAddr">
+                <image src="../pics/dingwei.png" style='width:40rpx;height:40rpx;' class='show_addr_right_pic'></image>
+            </view>
+        </view>
+        <!-- 以上是地址选择器 -->
+
+        <!-- 以下是配送时间 -->
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange"
+            value="{{multiIndex}}" range="{{multiArray}}">
+            <view class='time' style='float:left'>
+                <view class='time_1'>配送时间</view>
+                <view class='time_2'>
+                    {{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}
+                </view>
+                <view class='time_3'>
+                    <image src="../pics/timing.png" class='time_3_pic'></image>
+                </view>
+            </view>
+        </picker>
+        <!-- 以上是配送时间 -->
+
+        <!-- 以下是备注 -->
+        <view class='beizhu' style='float:left' bindtap="toBeizhu">
+            <view class='beizhu_1'>备注</view>
+            <view class='beizhu_2'>{{beizhu_desc}}</view>
+            <view class='beizhu_3'>
+                <image src="../pics/beizhu.png" class='beizhu_3_pic'></image>
+            </view>
+        </view>
+        <!-- 以上是备注 -->
+
+        <!-- 以下是商品展示 -->
+        <view class='zhanshi' style='float:left'>
+            <view class='zhanshi_jianxi'></view>
+            <view class='zhanshi_1'>辉煌美食大学城青蓝致远饭堂(广州大学城店)</view>
+            <view class='zhanshi_2' wx:for="{{shopList}}">
+                <view>
+                    <image src="{{item.pic}}" class='zhanshi_2_pic' style='float:left'></image>
+                </view>
+                <view style='float:left' class='.zhanshi_2_left'>
+                    <text style='font-size:24rpx;font-weight:bolder;color:#2b2b2b'>{{item.name}}</text>
+                    <text>\r\n</text>
+                    <text style='font-size:20rpx;color:#828282'>{{item.spicy}}</text>
+                </view>
+                <view style='float:left' class='.zhanshi_2_middle'>x{{item.num}}</view>
+                <view style='float:left' class='.zhanshi_2_right'>¥{{item.price}}</view>
+            </view>
+            <view class='zhanshi_3'>
+                <text style='font-size:26rpx'>合计 </text>
+                <text style='color:#373737;font-weight:bolder'>¥{{totalPrice}}</text>
+            </view>
+            <view class='zhanshi_jianxi2'></view>
+            <view class='zhanshi_4'>
+                <text style='font-size:26rpx'>小计 </text>
+                <text style='color:#373737;font-weight:bolder'>¥{{totalPrice}}</text>
+            </view>
+        </view>
+        <!-- 以上是商品展示 -->
+
+        <view class='bt_kongbai'></view>
+    </view>
+    <!-- 以下是底部支付 -->
+    <view class='bt_pay' style='float:left'>
+        <view class='bt_pay_left'>
+            <text style='color:#373737;padding-left:20rpx;color:#df5b55'>¥{{totalPrice}}</text>
+            <text>\r\n</text>
+            <text style='padding-left:20rpx;color:#939393;font-size:24rpx'>已优惠¥0</text>
+        </view>
+        <view class='bt_pay_right' catchtap="clickTopay">去支付</view>
+    </view>
+    <!-- 以上是底部支付 -->
+
+</view>

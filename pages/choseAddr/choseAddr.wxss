@@ -1,0 +1,119 @@
+
+.tagCompany{
+  text-align: center;
+  font-size:24rpx;
+  border:1px solid #76a0e3;
+  text-align:center;
+  color:#76a0e3;
+  background-color: #f9fbfe;
+}
+
+.tagWxAdd{
+  text-align: center;
+  font-size:24rpx;
+  border:1px solid hotpink;
+  text-align:center;
+  color:hotpink;
+  background-color: #f9fbfe;
+}
+
+.tagHome{
+  text-align: center;
+  font-size:24rpx;
+  border:1px solid #ecbcc1;
+  text-align:center;
+  color:#ecbcc1;
+  background-color: #fdf8f9;
+}
+
+.tagSchool{
+  text-align: center;
+  font-size:24rpx;
+  border:1px solid #b2e3d3;
+  text-align:center;
+  color:#b2e3d3;
+  background-color: #f8fdfb;
+}
+
+.eachAddr_left{
+  width: 10vw;
+}
+
+
+.eachAddr_middle{
+  width: 70vw;
+  float: left;
+  /* outline: 1px solid hotpink; */
+}
+
+.eachAddr_right{
+  width: 20vw;
+  height: 100%;
+  float: left;
+  /* outline: 1px solid hotpink; */
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+
+.eachAddr{
+  width: 100vw;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  /* outline: 1px solid black; */
+}
+
+.clear{
+  position: fixed;
+  left: 0;
+  bottom: 10vh;
+}
+
+.chose_addr{
+  width: 100vw;
+  
+}
+
+.chose_addr_top{
+  width: 100vw;
+  margin-top: 4vh;
+}
+
+.chose_addr_bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 7vh;
+  border-top: 1px solid #eeeeee;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.chose_addr_bottom_left{
+  text-align: center;
+  width: 45vw;
+  height: 5vh;
+  line-height: 5vh;
+  float: left;
+  border: 1px solid #efefef;
+  font-size: 28rpx;
+  font-weight:500;
+}
+
+.chose_addr_bottom_right{
+  text-align: center;
+  width: 45vw;
+  height: 5vh;
+  line-height: 5vh;
+  float: left;
+  font-size: 28rpx;
+  font-weight:500;
+  border: none;
+  background-color: #4994f7;
+  color: #f5fafe;
+}

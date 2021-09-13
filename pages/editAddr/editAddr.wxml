@@ -1,0 +1,28 @@
+<view class='main'>
+  <view class='name' id='css'>
+    <text style='float:left'>联系人</text>
+    <input model:value='{{name}}' type="text" placeholder="姓名" style='float:left;margin-left:40rpx' placeholder-class="phcolor" />
+  </view>
+  <view class='tel' id='css'>
+    <text style='float:left'>电话</text>
+    <input model:value='{{phoneNum}}' type="text" placeholder="手机号码" style='float:left;margin-left:60rpx' placeholder-class="phcolor" />
+  </view>
+  <view class='addr' id='css'  bindtap="clickLocation">
+    <text style='float:left'>地址</text>
+    <input type="text" placeholder="选择收货地址" model:value="{{location}}" style='float:left;margin-left:60rpx' placeholder-class="phcolor" />
+    <image src="../pics/定位.png" style='width:30rpx;height:30rpx;margin-left:200rpx'></image>
+  </view>
+  <view class='menpai' id='css'>
+    <text style='float:left'>门牌号</text>
+    <input model:value='{{menpaiNum}}' type="text" placeholder="例: 6单元606" style='float:left;margin-left:35rpx' placeholder-class="phcolor" />
+  </view>
+  <view class='tags' id='css'>
+    <text style='float:left'>标签</text>
+    <view class='tag_css' style='margin-left:9vw' bindtap="choseCompany" id='{{choseCompany}}'>公司</view>
+    <view class='tag_css' style='margin-left:9vw' bindtap="choseHome" id='{{choseHome}}'>家</view>
+    <view class='tag_css' style='margin-left:9vw' bindtap="choseSchool" id='{{choseSchool}}'>学校</view>
+  </view>
+  <view class='submit' bindtap="submit">
+    确定
+  </view>
+</view>

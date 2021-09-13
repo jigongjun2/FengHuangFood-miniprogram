@@ -1,0 +1,14 @@
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <view class='textarea'>
+      <view class='textarea2'>
+        <textarea placeholder=" 请输入备注，最多50个字哦~" placeholder-class="ph" name="textarea" bindinput='inputText'
+          maxlength='{{maxNumber}}' />
+        <span class="wordwrap">{{number}}/{{maxNumber}}</span>
+      </view>
+    </view>
+    <button form-type="submit" class='btn'
+      style='width:90vw;height:6vh;background-color: #4994f7;border-radius: 10rpx;text-align: center;font-size: 30rpx;color: #ffffff;margin-top:3vh'>
+      提交 </button>
+  </form>
+</view>

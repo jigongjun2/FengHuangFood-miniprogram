@@ -1,0 +1,35 @@
+
+.section{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.ph{
+  color: #c4c4c4;
+  font-size: 24rpx;
+}
+
+.textarea{
+  margin-top: 2vh;
+  background-color: #f8f8f8;
+  width: 90vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textarea2{
+  width: 80vw;
+  height: 25vh;
+  position: relative;
+}
+
+.wordwrap{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #8d8d8d;
+  font-size: 24rpx;
+}

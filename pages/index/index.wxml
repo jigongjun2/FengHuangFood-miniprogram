@@ -1,0 +1,203 @@
+<view>
+
+  <!-- 以下是授权登录弹窗 -->
+  <!-- <view class="cover_screen_login" catchtap="hideTanchuang_login" wx:if="{{showModalStatus_login}}"></view>
+  <view animation="{{animationData_login}}" class="bottom_box_login" wx:if="{{showModalStatus_login}}">
+    <view class='login_box' style='width:100%;height:20vh;text-align:center'>
+          <text style='font-size:30rpx'>申请获取以下权限</text> 
+          <text style='color:#a7a5a4;font-size:26rpx'>获得你的公开信息(昵称，头像等)</text>
+          <button bindtap='bindViewTap' type="primary" style='margin-top:20rpx;height:70rpx;font-size:30rpx'>授权登录</button>
+　　</view>
+  </view> -->
+  <!-- 以上是授权登录弹窗 -->
+
+  <!-- 以下是底部弹窗3 点击购物车 -->
+  <view class='bt_shopCar' wx:if="{{isShowShopCar}}">
+    <view class="cover_screen_shopCar" catchtap="hideTanchuang_shopCar" wx:if="{{showModalStatus_shopCar}}">
+    </view>
+    <view animation="{{animationData_shopCar}}" class="bottom_box_shopCar" wx:if="{{showModalStatus_shopCar}}">
+      <view class='shopCar_top'>
+        <text class='shopCar_top_left'>已选商品</text>
+        <image src="../pics/delete.png" class='shopCar_top_img' catchtap="clearShopList"></image>
+        <text class='shopCar_top_right' catchtap="clearShopList">清空</text>
+      </view>
+
+      <view wx:for="{{shopCarList}}">
+        <view class='eachShopCarView'>
+          <view class='bt_tc_top'>
+            <view class='bt_tc_name'>
+              {{item.name}}
+            </view>
+            <view class='bt_tc_price'>
+              <view class='bt_tc_price_1'>¥{{item.price}}</view> 
+              <view wx:if='{{isDelShopCar&item.isDelShopCar&item.isShowZero}}' class='shopDel_shopcar' bindtap="reduceNum"
+                data-foodInfo='{{item}}'>-</view>
+              <view wx:if='{{item.isAddShopCar&item.isShowZero}}' style='float:left;text-align:center;width:50rpx'>
+                <text decode="{{true}}" style='color:#9f9f9f'>&nbsp;{{item.num}}&nbsp;</text>
+              </view>
+              <view wx:if='{{item.isAddShopCar}}' class='shopAdd_shopcar' bindtap="addNum" data-foodInfo='{{item}}'>+</view>
+            </view>
+          </view>
+          <view class='bt_tc_spicy'>
+            {{item.spicy}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='{{shopCarPicView}}'>
+      <image src="{{isListHasThings?'../pics/shopcar.png':'../pics/shopcar2.png'}}" class='shopCarPic' bindtap="clickShopCar">
+      </image>
+    </view>
+    <view style='margin-left:150rpx;width:250rpx;height:100rpx;'>
+      <view style='margin-top:10rpx;font-size:28rpx;font-weight:bolder'>¥{{bt_desc}}</view>
+      <view style='font-size:22rpx'>另需配送费 ¥0 起</view>
+      <view class='{{bt_desc_rightCss}}' bindtap="jumpTo">{{bt_desc_right}}</view>
+    </view>
+  </view>
+  <!-- 以上是是底部弹窗3 点击购物车 -->
+
+  <scroll-view scroll-y="true" class="mainScroll" bindscroll="scroll" scroll-with-animation scroll-top="{{maoDian}}"
+    style='height:1450rpx;'>
+    <view class='topPic'>
+      <image src='../pics/huihuang.png' class='hhpic'></image>
+    </view>
+
+    <view class='top_desc' catchtap="touchTopDesc">
+      <view class='spname'>{{shopName}}</view>
+      <view class='peisong' id='littleFontColor'>{{peisongInfo}}</view>
+      <view class='tips' id='littleFontColor'>{{tips}}</view>
+    </view>
+
+    <!-- 以下是底部弹窗1 商家信息-->
+    <view class="cover_screen" catchtap="hideTanchuang" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="bottom_box" wx:if="{{showModalStatus}}">
+      <view style='text-align:center;font-size:35rpx;font-weight:bolder'>辉煌美食大学城青蓝致远饭堂(广州大学城店)</view>
+      <view style='font-size:37rpx;font-weight:bolder;margin-top:20rpx;padding-left:15rpx'>配送</view>
+      <view style='font-size:24rpx;margin-top:10rpx;padding-left:15rpx' id='littleFontColor'>起送价 ¥0.1 丨 配送费 ¥0 起
+      </view>
+      <view style='font-size:24rpx;margin-top:10rpx;padding-left:15rpx' id='littleFontColor'>营业时间：09:00-20:00</view>
+      <view style='font-size:37rpx;font-weight:bolder;margin-top:20rpx;padding-left:15rpx'>门店信息</view>
+      <view style='font-size:24rpx;margin-top:10rpx;padding-left:15rpx' id='littleFontColor'>
+        门店地址：广东省广州市番禺区小谷围街道穗石村直街大街24<text>\r\n</text>号首层</view>
+      <view style='font-size:24rpx;margin-top:10rpx;padding-left:15rpx' id='littleFontColor'>联系电话：13418029711
+        <image catchtap="callPhone" class="bt_pic" src="../pics/phone.png" />
+      </view>
+      <view style='font-size:37rpx;font-weight:bolder;margin-top:20rpx;padding-left:15rpx'>公告</view>
+      <view style='font-size:24rpx;margin-top:10rpx;padding-left:15rpx' id='littleFontColor'>
+        公告：盟友外卖2.0全新升级由青蓝致远提供技术支持！先点几拼再点菜式哦！</view>
+    </view>
+    <!-- 以上是底部弹窗1 商家信息-->
+
+    <!-- 以下是底部弹窗2 选购展示-->
+    <view class="cover_screen_choseType" catchtap="hideTanchuang_choseType" wx:if="{{showModalStatus_choseType}}">
+    </view>
+    <view animation="{{animationData_choseType}}" class="bottom_box_choseType" wx:if="{{showModalStatus_choseType}}">
+      <image src="{{getChoseTypeInfo.pic}}" class='eachFoodPic' style='margin-left:20rpx'></image>
+      <view class='eachFoodName'>{{getChoseTypeInfo.name}}</view>
+      <view class='eachFoodPrice2'>
+        <text style='float:left;margin-top:100rpx;'>¥{{getChoseTypeInfo.price}}</text>
+      </view>
+      <view style='float:left;margin-top:200rpx;margin-left:-540rpx;font-size:28rpx;color:#505050'>辣度</view>
+      <view style='float:left;margin-top:280rpx;margin-left:-540rpx;'>
+        <button size="mini" bindtap="choseNotSpicy" data-notspicy='不辣'
+          class="{{getChoseTypeInfo.name=='三拼饭(先选几拼再选菜)'?notSpicyChose:notSpicyChose2}}">不辣</button>
+        <button size="mini" bindtap="choseSpicy" data-spicy='辣'
+          class="{{getChoseTypeInfo.name=='三拼饭(先选几拼再选菜)'?spicyChose:spicyChose2}}">辣</button>
+        <text>\r\n</text>
+        <button size="mini" bindtap="choseReady"
+          style='height:80rpx;line-height:80rpx;width:675rpx;font-size:30rpx;font-weight:400;background:#4994f7;color:white;margin-top:40rpx'>
+          选好了
+        </button>
+      </view>
+    </view>
+    <!-- 以上是底部弹窗2 选购展示-->
+
+    <view class="menuMain">
+      <!-- 以下是左侧菜单栏 -->
+      <view class="{{chosemenuLeft}}">
+        <!-- <view class="menuLeft"> -->
+        <view class='{{orderleft1}}' bindtap="clickleft1">
+          自选套餐
+        </view>
+        <view class='{{orderleft2}}' bindtap="clickleft2">
+          套餐
+        </view>
+      </view>
+      <!-- 以上是左侧菜单栏 -->
+
+      <!-- 以下是右侧菜单栏 -->
+      <!-- 以下是右侧下方自选套餐 -->
+      <view class='{{chosemenuRight}}'>
+        <view>
+          <text style='font-size:22rpx;color:#8e8e8e'>自选快餐</text>
+          <view wx:for="{{menuArr}}">
+            <view class='eachFoodBox'>
+              <image src="{{item.pic}}" class='eachFoodPic'></image>
+              <view class='eachFoodName'>{{item.name}}</view>
+              <view class='eachFoodsale'>月售{{item.sale}}</view>
+              <view class='eachFoodVipPrice' wx:if="{{item.isVip}}">
+                <image src="../pics/vip.png" class='vipPic'></image>
+                会员价¥{{item.vipPrice}}
+              </view>
+              <!-- 是会员 -->
+              <view class='eachFoodPrice2' wx:if="{{item.isVip}}">
+                <text style='float:left'>¥{{item.price}}</text>
+                <view wx:if='{{item.isChoseType}}' class='choseSpType'>选规格</view>
+                <view wx:if='{{isDelShopCar&item.isDelShopCar&item.isShowZero}}' class='shopDel' bindtap="reduceNum"
+                  data-foodInfo='{{item}}'>-</view>
+                <view wx:if='{{item.isAddShopCar&item.isShowZero}}' style='float:left;text-align:center;width:50rpx'>
+                  <text decode="{{true}}" style='color:#9f9f9f'>&nbsp;{{item.num}}&nbsp;</text>
+                </view>
+                <view wx:if='{{item.isAddShopCar}}' class='shopAdd' bindtap="addNum" data-foodInfo='{{item}}'>+</view>
+              </view>
+              <!-- 不是会员 -->
+              <view class='eachFoodPrice1' wx:elif="{{item.notVip}}">
+                <text style='float:left'>¥{{item.price}}</text>
+                <view wx:if='{{item.isChoseType}}' class="{{choseSpTypeCss}}" bindtap="choseSpType"
+                  data-foodInfo='{{item}}'>
+                  选规格</view>
+                <view wx:if='{{isDelShopCar&item.isDelShopCar&item.isShowZero}}' class='shopDel' bindtap="reduceNum"
+                  data-foodInfo='{{item}}'>-</view>
+                <view wx:if='{{item.isAddShopCar&item.isShowZero}}' style='float:left;text-align:center;width:50rpx'>
+                  <text decode="{{true}}" style='color:#9f9f9f'>&nbsp;{{item.num}}&nbsp;</text>
+                </view>
+                <view wx:if='{{item.isAddShopCar}}' class='shopAdd' bindtap="addNum" data-foodInfo='{{item}}'>+</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 以下是右侧下方自选套餐 -->
+
+        <!-- 以下是右侧下方套餐 -->
+        <view>
+          <text style='font-size:22rpx;color:#8e8e8e'>套餐</text>
+          <view wx:for="{{menuArr2}}">
+            <view class='eachFoodBox'>
+              <image src="{{item.pic}}" class='eachFoodPic'></image>
+              <view class='eachFoodName'>{{item.name}}</view>
+              <view class='eachFoodsale'>月售{{item.sale}}</view>
+              <view class='eachFoodVipPrice' wx:if="{{item.isVip}}">
+                <image src="../pics/vip.png" class='vipPic'></image>
+                会员价¥{{item.vipPrice}}
+              </view>
+              <view class='eachFoodPrice2' wx:if="{{item.isVip}}">¥{{item.price}}</view>
+              <view class='eachFoodPrice1' wx:elif="{{item.notVip}}">
+                <text style='float:left'>¥{{item.price}}</text>
+                <view wx:if='{{isDelShopCar&item.isDelShopCar&item.isShowZero}}' class='shopDelTc' bindtap="reduceNumTc"
+                  data-foodInfo='{{item}}'>-</view>
+                <view wx:if='{{item.isAddShopCar&item.isShowZero}}' style='float:left;text-align:center;width:50rpx'>
+                  <text decode="{{true}}" style='color:#9f9f9f'>&nbsp;{{item.num}}&nbsp;</text>
+                </view>
+                <view wx:if='{{item.isAddShopCar}}' class='shopAddTc' bindtap="addNumTc" data-foodInfo='{{item}}'>+
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 以下是右侧下方套餐 -->
+      </view>
+      <!-- 以上是右侧菜单栏 -->
+    </view>
+
+  </scroll-view>
+</view>

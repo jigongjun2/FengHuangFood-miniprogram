@@ -1,0 +1,56 @@
+.main{
+  width: 100vw;
+  height: 100vh;
+}
+
+#choseSchool{
+  outline: 1px solid #b2e3d3;
+  color: #b2e3d3;
+  background-color: #f8fdfb;
+}
+
+#choseHome{
+  outline: 1px solid #ecbcc1;
+  color: #ecbcc1;
+  background-color: #fdf8f9;
+}
+
+#choseCompany{
+  outline: 1px solid #c9daf3;
+  color: #c9daf3;
+  background-color: #f9fbfe;
+}
+
+.tag_css{
+  text-align: center;
+  width: 15vw;
+  height: 4vh;
+  line-height: 4vh;
+  outline: 1px solid #c3c3c3;
+}
+
+.phcolor{
+  color:#cbcbcb ;
+}
+
+#css{
+  font-size: 28rpx;
+  padding-left: 30rpx;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 8vh;
+  line-height: 8vh;
+  color: #8d8d8d;
+}
+
+.submit{
+  margin-left: 10vw;
+  text-align: center;
+  width: 80vw;
+  height: 7vh;
+  line-height: 7vh;
+  background-color: #4994f7;
+  margin-top: 8vh;
+  color:#ffffff ;
+}
